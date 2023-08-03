@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.google.firebase.analytics.FirebaseAnalytics
 
+
 class AuthActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,8 +23,8 @@ class AuthActivity : AppCompatActivity() {
 
     private fun setup(){
         title = "Autenticacion"
-
-
+        ///singUpButton.setOnclick
+        singUp
     }
 
 }
