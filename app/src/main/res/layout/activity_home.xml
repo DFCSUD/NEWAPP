@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="#FFFFFF"
     tools:context=".HomeActivity">
 
     <LinearLayout
@@ -22,7 +22,8 @@
             android:id="@+id/emailTextView"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:text="Email" />
+            android:text="Email"
+            android:textColor="#000000"/>
 
         <Space
             android:layout_width="match_parent"
@@ -31,8 +32,79 @@
         <TextView
             android:id="@+id/providerTextView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:text="Proveedor" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="8dp" />
+
+        <EditText
+            android:id="@+id/nameUser"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="Nombre Usuario"
+            android:textColor="#000000"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="8dp" />
+
+        <EditText
+            android:id="@+id/phoneTxtView"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="Telefono"
+            android:textColor="#000000"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="8dp" />
+
+        <EditText
+            android:id="@+id/address"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="Direccion"
+            android:textColor="#000000"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/saveBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/colorAccent"
+                android:text="Guardar" />
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/consultarBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/colorAccent"
+                android:text="Consultar" />
+
+        </LinearLayout>
 
         <Space
             android:layout_width="match_parent"
@@ -48,10 +120,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@color/colorAccent"
-                android:text="Cerrar Sesion" />
-
+                android:text="Cerrar Sesion"
+                android:backgroundTint="@color/colorAccent"/>
         </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="8dp" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
