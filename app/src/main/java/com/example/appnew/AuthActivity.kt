@@ -38,7 +38,7 @@ class AuthActivity : AppCompatActivity() {
                         binding.passwordEditText.text.toString()
                     ).addOnCompleteListener {
                         if (it.isSuccessful) {
-                            showHome(it.result?.user?.email ?: "", ProviderType.BASIC)
+                            showHome(it.result?.user?.email ?: "")
                         } else {
                             showAlert()
                         }
@@ -53,7 +53,7 @@ class AuthActivity : AppCompatActivity() {
                         binding.passwordEditText.text.toString()
                     ).addOnCompleteListener {
                         if (it.isSuccessful) {
-                            showHome(it.result?.user?.email ?: "", ProviderType.BASIC)
+                            showHome(it.result?.user?.email ?: "")
                         } else {
                             showAlert()
                         }
@@ -73,11 +73,13 @@ class AuthActivity : AppCompatActivity() {
         dialog.show()
     }
 
-    private fun showHome(email: String, provider: ProviderType) {
-        val homeIntent = Intent(this, HomeActivity::class.java).apply {
+    private fun showHome(email: String) {
+        //  val homeIntent = Intent(this, HomeActivity::class.java).apply {
+        val homeIntent = Intent(this, MenuActivity::class.java).apply {
             putExtra("email", email)
-            putExtra("provider", provider.name)
         }
         startActivity(homeIntent)
     }
+
+
 }
